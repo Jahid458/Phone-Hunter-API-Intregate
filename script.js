@@ -1,5 +1,5 @@
-const loadAllphones = async(status,brandName) =>{
-  console.log(brandName);
+const loadAllphones = async(status,searchText) =>{
+  console.log(searchText);
   document.getElementById("spinner").style.display = "none";
 
   // .then diye then
@@ -8,7 +8,7 @@ const loadAllphones = async(status,brandName) =>{
   // .then(data => console.log(data))
 
   // smae kaj async await diye kora jai 
-  const response = await fetch(`https://openapi.programming-hero.com/api/phones?search=${brandName?brandName:"iphone"}`);
+  const response = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText?searchText:"iphone"}`);
   const data = await response.json()
   console.log(data)
    // console.log(data) // alla data pacchi 
