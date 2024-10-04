@@ -30,20 +30,22 @@ const displayAllPhones = (phones) => {
   //search dile sei data niye ashte hbe
   const phonesContainer = document.getElementById("phones-container");
   phones.forEach((phone) => {
+    const { brand, image,slug} = phone
+    console.log(phone)
     const div = document.createElement("div");
     div.innerHTML = `
-        <div class="card bg-base-100 w-96 shadow-xl">
+        <div class="card m-2 bg-base-100 w-96 shadow-xl">
           <figure class="px-10 pt-10">
             <img
-              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+              src=${image}
               alt="Shoes"
               class="rounded-xl" />
           </figure>
           <div class="card-body items-center text-center">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <h2 class="card-title">${brand}</h2>
+            <p>${slug}</p>
             <div class="card-actions">
-              <button class="btn btn-primary">Buy Now</button>
+              <button class="btn btn-primary">Show Deatils</button>
             </div>
           </div>
         </div>
@@ -66,3 +68,15 @@ const handleSearch = () => {
   }, 3000);
 };
 loadAllphones(false, "iphone");
+
+
+// const phone ={
+//   brand: 'Apple ',
+//   phone_name: 'iPhone 12 Pro', 
+//   slug: 'apple_iphone_12_pro-10508',
+//   image: 'https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-pro.jpg'
+//   }
+    
+//  const { brand, image,slug} = phone
+
+//   console.log(slug)
