@@ -69,9 +69,11 @@ const handleSearch = () => {
 };
 
 
-const phoneDetails = (slug) =>{
-    console.log(slug)
-}
+const phoneDetails = async(slug) =>{
+    const response =await fetch(`https://openapi.programming-hero.com/api/phone/${slug}`);
+    const data = await response.json();
+    console.log(data.data)
+} 
 
 
 
