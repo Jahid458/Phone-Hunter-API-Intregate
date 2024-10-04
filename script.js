@@ -27,6 +27,8 @@ const loadAllphones = async (status, searchText) => {
 };
 
 const displayAllPhones = (phones) => {
+
+  
   //search dile sei data niye ashte hbe
   const phonesContainer = document.getElementById("phones-container");
   phones.forEach((phone) => {
