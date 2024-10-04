@@ -45,7 +45,7 @@ const displayAllPhones = (phones) => {
             <h2 class="card-title">${brand}</h2>
             <p>${slug}</p>
             <div class="card-actions">
-              <button class="btn btn-primary">Show Deatils</button>
+              <button onclick="phoneDetails()" class="btn btn-primary">Show Deatils</button>
             </div>
           </div>
         </div>
@@ -67,6 +67,19 @@ const handleSearch = () => {
     loadAllphones(false, searchText);
   }, 3000);
 };
+
+
+const phoneDetails = (slug) =>{
+    console.log(slug)
+}
+
+
+
+
+
+
+
+
 loadAllphones(false, "iphone");
 
 
